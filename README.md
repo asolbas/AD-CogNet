@@ -4,7 +4,7 @@ GitHub repository for the code accompanying my MSc in Computational Biology thes
 
 ## Data 
 
-For this work, the demographical and neuropsychological data from the Alzheimer's Disease Neuroimaging Initiative (ADNI) was employed. These datasets are available at the [ADNI website](https://adni.loni.usc.edu/) upon formal request.
+For this work, the demographical and neuropsychological data from the Alzheimer's Disease Neuroimaging Initiative (ADNI) was employed. These datasets are available at the [ADNI website](https://adni.loni.usc.edu/) upon formal request. A complete listing of ADNI investigators can be found in the following [link](http://adni.loni.usc.edu/wp-content/uploads/how_to_apply/ADNI_Acknowledgement_List.pdf).
 
 ![plot](./Figures/EDA_Dashboard.png)
 
