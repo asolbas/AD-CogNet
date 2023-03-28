@@ -70,4 +70,10 @@ merged_As_cm <- barplot_by_community("./merged/", "Asyn", "merged")
 ADASMOCA_Lv_cm <- barplot_by_community("./ADASMOCA/", "Louvain", "ADASMOCA")
 ADASMOCA_Gd_cm <- barplot_by_community("./ADASMOCA/", "Greedy", "ADASMOCA")
 ADASMOCA_Bs_cm <- barplot_by_community("./ADASMOCA/", "Bisection", "ADASMOCA")
-ADASMOCA_As_cm <- barplot_by_community("./ADASMOCA/", "Asyn", "ADASMOCA")m
+ADASMOCA_As_cm <- barplot_by_community("./ADASMOCA/", "Asyn", "ADASMOCA")
+
+## NEUROBAT
+NEUROBAT_Lv_cm <- barplot_by_community("./NEUROBAT/", "Louvain", "NEUROBAT")
+NEUROBAT_Gd_cm <- barplot_by_community("./NEUROBAT/", "Greedy", "NEUROBAT")
+NEUROBAT_Bs_cm <- barplot_by_community("./NEUROBAT/", "Bisection", "NEUROBAT")
+NEUROBAT_As_cm <- barplot_by_community("./NEUROBAT/", "Asyn", "NEUROBAT")
