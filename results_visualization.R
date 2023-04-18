@@ -11,7 +11,7 @@ library(tidyverse)
 library(knitr)
 library(scales)
 
-#GLOBAL METRIC RESULTS --------------------------------------------------------
+#GLOBAL METRIC RESULTS (BAR PLOT)-----------------------------------------------
 
 #get list of directories inside Bootstrap_results folder
 main_dir <- paste(getwd(), "/Bootstrap_gm_results", sep="")
@@ -46,6 +46,7 @@ for (dir in dir_ls){
 }
 
 gm_df$dx = factor(gm_df$dx, levels=c('CN', 'MCI', 'AD'))
+gm_df$battery = factor(gm_df$battery, levels=c('ADAS', 'MOCA', 'NEUROBAT','ADASMOCA'))
 gm_df$measure = factor(gm_df$measure, levels = c('Diameter', 'Density', 'AvDegree',
                        'AvCC', 'GE'))
 
@@ -54,7 +55,8 @@ cbPalette <- c("#1f77b4", "#ff7f0e", "#2ca02c")
 
 #plot
 
-gm <- ggplot(gm_df, aes(x=dx, y=as.numeric(mean), fill=dx)) + 
+gm <- ggplot(gm_df, aes(x=dx, y=as.numeric(mean), fill=dx)) +
+  #geom_boxplot() +
   geom_bar(position=position_dodge(), stat="identity",
            colour="black", # Use black outlines,
            linewidth=.3) +      # Thinner 
@@ -70,13 +72,100 @@ gm <- ggplot(gm_df, aes(x=dx, y=as.numeric(mean), fill=dx)) +
   theme(
     panel.grid.major.x = element_blank(),
     plot.title = element_text(hjust = 0.5, size=16, face="bold"),
-    axis.text=element_text(size=12),
+    axis.text=element_text(size=10),
     axis.title=element_text(size=14,face="bold"),
-    strip.text.x = element_text(size = 14),
-    strip.text.y = element_text(size = 14)
+    strip.text.x = element_text(size = 12, face="bold"),
+    strip.text.y = element_text(size = 12, face="bold"),
+    strip.background = element_rect(color = "white", fill="white"),
+    legend.title=element_blank(),
+    legend.position="bottom"
   )
 
 ggsave(file="./Figures/Bootstrap_metrics/gm.png", device="png", plot=gm, width=10, height=8)
+
+#GLOBAL METRIC RESULTS (BOXPLOT)-----------------------------------------------
+
+#get list of directories inside Bootstrap_results folder
+main_dir <- paste(getwd(), "/Bootstrap_gm_results", sep="")
+dir_ls <- list.dirs(path = main_dir, full.names = TRUE, recursive = FALSE)
+
+#empty dataframe to store results
+gm_df <- data.frame(measure=character(), value=double(), dx=character(),battery=character()) 
+
+#iterate directories (batteries)
+for (dir in dir_ls){
+  i <- 0
+  file_path_ls <- list.files(path=dir, full.names=TRUE) #get metric files for each dx group
+  battery <- tail(unlist(str_split(dir, "/")), n=1) 
+  
+  #iterate each diagnostic group
+  for (file in file_path_ls){
+    name <- tail(unlist(str_split(file, "/")), n=1) #remove path
+    dx <- unlist(str_split(name, ".csv"))[1] #remove file extension
+    
+    df_temp <- read.csv(file, header=TRUE, sep=",")
+    
+    # Convert dataframe to long format
+    df_temp <- df_temp %>% 
+      pivot_longer(everything(), names_to = "measure", values_to = "value")
+    df_temp$dx <- dx
+    df_temp$battery <- battery
+    
+    gm_df <- rbind(gm_df, df_temp)
+    
+    }
+  }
+
+
+gm_df$dx = factor(gm_df$dx, levels=c('CN', 'MCI', 'AD'))
+gm_df$battery = factor(gm_df$battery, levels=c('ADAS', 'MOCA', 'NEUROBAT','ADASMOCA'))
+gm_df$measure = factor(gm_df$measure, levels = c('Diameter', 'Density', 'AvDegree',
+                                                 'AvCC', 'GE'))
+
+cbPalette <- c("#1f77b4", "#ff7f0e", "#2ca02c")
+
+
+#plot
+
+sigFunc = function(x){
+  if(x < 0.001){"***"} 
+  else if(x < 0.01){"**"}
+  else if(x < 0.05){"*"}
+  else{NA}}
+
+gm_bx <- ggplot(gm_df, aes(x=dx, y=as.numeric(value), fill=dx)) +
+  stat_boxplot(geom = "errorbar", width = 0.3) +
+  geom_boxplot(colour="black", # Use black outlines,
+  linewidth=.3, width=0.5, position = position_dodge(width=0.1),
+  outlier.size=1.3, outlier.shape=18) +
+  geom_signif(comparisons = list(c("CN", "MCI")), map_signif_level = sigFunc, 
+              margin_top = 0.05, tip_length = 0) +
+  geom_signif(comparisons = list(c("MCI", "AD")), map_signif_level = sigFunc, 
+              margin_top = 0.20, tip_length = 0) +
+  geom_signif(comparisons = list(c("CN", "AD")), map_signif_level = sigFunc, 
+              margin_top = 0.35, tip_length = 0) +
+  stat_summary(fun = "mean", geom="point", size=0.7, colour="white", fill="white") +
+  scale_fill_manual(values=cbPalette, name="diagnostic") +
+  scale_y_continuous(n.breaks=5, expand = expansion(mult = c(0, 0.1))) +
+  facet_grid(rows = vars(measure), cols = vars(battery), scales = "free") +
+  xlab("Diagnostic group") +
+  ylab("Mean value (n=250)") +
+  ggtitle("GT global measures") +
+  theme_bw() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    plot.title = element_text(hjust = 0.5, size=16, face="bold"),
+    axis.text=element_text(size=10),
+    axis.title=element_text(size=14,face="bold"),
+    strip.text.x = element_text(size = 12, face="bold"),
+    strip.text.y = element_text(size = 12, face="bold"),
+    strip.background = element_rect(color = "white", fill="white"),
+    legend.title=element_blank(),
+    legend.position="bottom"
+  )
+
+ggsave(file="./Figures/Bootstrap_metrics/gm_boxplot.png", device="png", plot=gm_bx, width=10, height=9)
+
 
 #DEGREE CENTRALITY RESULTS --------------------------------------------------------
 
@@ -156,14 +245,17 @@ for (dir in dir_ls){
       ylab("Test") +
       ggtitle(paste("Degree centrality (", battery, ")", sep="")) +
       theme_bw() +
-      theme(
-        panel.grid.major.y = element_blank(),
-        plot.title = element_text(hjust = 0.5, size=16, face="bold"),
-        axis.text=element_text(size=12),
-        axis.title=element_text(size=14,face="bold"),
-        strip.text.x = element_text(size = 14),
-        strip.text.y = element_text(size = 14)
-      )
+    theme(
+      panel.grid.major.y = element_blank(),
+      plot.title = element_text(hjust = 0.5, size=16, face="bold"),
+      axis.text=element_text(size=10),
+      axis.title=element_text(size=14,face="bold"),
+      strip.text.x = element_text(size = 12, face="bold"),
+      strip.text.y = element_text(size = 12, face="bold"),
+      strip.background = element_rect(color = "white", fill="white"),
+      legend.title=element_blank(),
+      legend.position="bottom"
+    )
   
   filename = paste("./Figures/Bootstrap_metrics/DC_", battery, ".png", sep="")
   ggsave(file=filename, device="png", plot=p, width=7, height=10)
@@ -248,11 +340,15 @@ for (dir in dir_ls){
     ggtitle(paste("Betweenness centrality (", battery, ")", sep="")) +
     theme_bw() +
     theme(
-      panel.grid.major.y = element_blank(),
+      panel.grid.major.x = element_blank(),
       plot.title = element_text(hjust = 0.5, size=16, face="bold"),
-      axis.text=element_text(size=12),
+      axis.text=element_text(size=10),
       axis.title=element_text(size=14,face="bold"),
-      strip.text.y = element_text(size = 14)
+      strip.text.x = element_text(size = 12, face="bold"),
+      strip.text.y = element_text(size = 12, face="bold"),
+      strip.background = element_rect(color = "white", fill="white"),
+      legend.title=element_blank(),
+      legend.position="bottom"
     )
   
   filename = paste("./Figures/Bootstrap_metrics/BC_", battery, ".png", sep="")
@@ -292,9 +388,11 @@ barplot_by_community <- function(path, cm_algorithm, battery_name){
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
       plot.title = element_text(hjust = 0.5, size=16, face="bold"),
-      axis.text=element_text(size=12),
+      axis.text=element_text(size=10),
       axis.title=element_text(size=14,face="bold"),
-      strip.text.x = element_text(size = 14)
+      strip.text.x = element_text(size = 12, face="bold"),
+      strip.text.y = element_text(size = 12, face="bold"),
+      strip.background = element_rect(color = "white", fill="white"),
     )
   
   result_name=paste(battery_name, "_", cm_algorithm, ".png", sep="")
@@ -310,12 +408,6 @@ ADAS_Lv_cm <- barplot_by_community("./ADAS/", "Louvain", "ADAS")
 ADAS_Gd_cm <- barplot_by_community("./ADAS/", "Greedy", "ADAS")
 ADAS_Bs_cm <- barplot_by_community("./ADAS/", "Bisection", "ADAS")
 ADAS_As_cm <- barplot_by_community("./ADAS/", "Asyn", "ADAS")
-
-## MMSE
-MMSE_Lv_cm <- barplot_by_community("./MMSE/", "Louvain", "MMSE")
-MMSE_Gd_cm <- barplot_by_community("./MMSE/", "Greedy", "MMSE")
-MMSE_Bs_cm <- barplot_by_community("./MMSE/", "Bisection", "MMSE")
-MMSE_As_cm <- barplot_by_community("./MMSE/", "Asyn", "MMSE")
 
 ## MOCA
 MOCA_Lv_cm <- barplot_by_community("./MOCA/", "Louvain", "MOCA")
