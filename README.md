@@ -29,7 +29,7 @@ The original Tableau dashboard can be found in the following [link](https://publ
 | `GT_analysis_genetics.ipynb` | Construction and analysis of cognitive networks for various genetic profiles clusters |
 | `results_visualization.R` | Exploratory data analysis and results visualizations |
 
-## Authors
+## Contributors
 
 Ana Solbas Casajús
 
