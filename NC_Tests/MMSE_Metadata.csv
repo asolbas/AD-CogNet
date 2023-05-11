@@ -1,0 +1,31 @@
+﻿Node;ADNI column;Label;Test;Cognitive Domain
+0;MMDATE;MM1_OT;Orientation to time ;Orientation
+0;MMYEAR;MM1_OT;Orientation to time ;Orientation
+0;MMMONTH;MM1_OT;Orientation to time ;Orientation
+0;MMDAY;MM1_OT;Orientation to time ;Orientation
+0;MMSEASON;MM1_OT;Orientation to time ;Orientation
+1;MMHOSPIT;MM2_OP;Orientation to place;Orientation
+1;MMFLOOR;MM2_OP;Orientation to place;Orientation
+1;MMCITY;MM2_OP;Orientation to place;Orientation
+1;MMAREA;MM2_OP;Orientation to place;Orientation
+1;MMSTATE;MM2_OP;Orientation to place;Orientation
+2;MMBALL;MM3_Reg;Registration;Memory
+2;MMFLAG;MM3_Reg;Registration;Memory
+2;MMTREE;MM3_Reg;Registration;Memory
+3;MMD;MM4_SB;Spelling backwards;Attention
+3;MML;MM4_SB;Spelling backwards;Attention
+3;MMR;MM4_SB;Spelling backwards;Attention
+3;MMO;MM4_SB;Spelling backwards;Attention
+3;MMW;MM4_SB;Spelling backwards;Attention
+4;MMBALLDL;MM5_RR;Registration recall;Memory
+4;MMFLAGDL;MM5_RR;Registration recall;Memory
+4;MMTREEDL;MM5_RR;Registration recall;Memory
+5;MMWATCH;MM6_NCO;Naming common objects;Language
+5;MMPENCIL;MM6_NCO;Naming common objects;Language
+6;MMREPEAT;MM7_Rep;Repetition;Language
+7;MMHAND;MM8_CI;Comprehend instructions;Language
+7;MMFOLD;MM8_CI;Comprehend instructions;Language
+7;MMONFLR;MM8_CI;Comprehend instructions;Language
+8;MMREAD;MM9_Read;Reading;Language
+9;MMWRITE;MM10_Write;Writing;Language
+10;MMDRAW;MM11_Draw;Drawing a clock;Visuospatial

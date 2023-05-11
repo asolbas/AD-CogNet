@@ -1,0 +1,43 @@
+﻿Node;ADNI column;Label;Test;Cognitive Domain
+0;TRAILS;Mo1_TMT;Trail-making task;Executive
+1;CUBE;Mo2_CC;Copy cube;Visuospatial
+2;CLOCKCON;Mo3_CDT;Clock Drawing Test;Visuospatial
+2;CLOCKNO;Mo3_CDT;Clock Drawing Test;Visuospatial
+2;CLOCKHAN;Mo3_CDT;Clock Drawing Test;Visuospatial
+3;LION;Mo4_NT;Naming ;Language
+3;RHINO;Mo4_NT;Naming ;Language
+3;CAMEL;Mo4_NT;Naming ;Language
+4;IMMT1W1;Mo5_WRT1;Word recall trail 1;Memory
+4;IMMT1W2;Mo5_WRT1;Word recall trail 1;Memory
+4;IMMT1W3;Mo5_WRT1;Word recall trail 1;Memory
+4;IMMT1W4;Mo5_WRT1;Word recall trail 1;Memory
+4;IMMT1W5;Mo5_WRT1;Word recall trail 1;Memory
+5;IMMT2W1;Mo6_WRT2;Word recall trail 2;Memory
+5;IMMT2W2;Mo6_WRT2;Word recall trail 2;Memory
+5;IMMT2W3;Mo6_WRT2;Word recall trail 2;Memory
+5;IMMT2W4;Mo6_WRT2;Word recall trail 2;Memory
+5;IMMT2W5;Mo6_WRT2;Word recall trail 2;Memory
+6;DIGFOR;Mo7_DSF;Digit Span Forward;Executive
+7;DIGBACK;Mo8_DSB;Digit Span Backward;Executive
+8;LETTERS;Mo9_SelA;Selective attention;Attention
+9;SERIAL1;Mo10_SST;Serial substraction;Executive
+9;SERIAL2;Mo10_SST;Serial substraction;Executive
+9;SERIAL3;Mo10_SST;Serial substraction;Executive
+9;SERIAL4;Mo10_SST;Serial substraction;Executive
+9;SERIAL5;Mo10_SST;Serial substraction;Executive
+10;REPEAT1;Mo11_Rep;Repetition;Language
+10;REPEAT2;Mo11_Rep;Repetition;Language
+11;FFLUENCY;Mo12_VF;Verbal fluency;Language
+12;ABSTRAN;Mo13_Abs;Abstraction;Executive
+12;ABSMEAS;Mo13_Abs;Abstraction;Executive
+13;DELW1;Mo14_DWR;Delayed world recall;Memory
+13;DELW2;Mo14_DWR;Delayed world recall;Memory
+13;DELW3;Mo14_DWR;Delayed world recall;Memory
+13;DELW4;Mo14_DWR;Delayed world recall;Memory
+13;DELW5;Mo14_DWR;Delayed world recall;Memory
+14;DATE;Mo15_OT;Orientation to time;Orientation
+14;MONTH;Mo15_OT;Orientation to time;Orientation
+14;YEAR;Mo15_OT;Orientation to time;Orientation
+14;DAY;Mo15_OT;Orientation to time;Orientation
+15;PLACE;Mo16_OP;Orientation to place;Orientation
+15;CITY;Mo16_OP;Orientation to place;Orientation

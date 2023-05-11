@@ -1,0 +1,56 @@
+﻿Node;ADNI column;Label;Test;Cognitive Domain
+0;Q1SCORE;Q1_WR;Word recall;Memory
+1;Q2SCORE;Q2_Comm;Commands;Language
+2;Q3SCORE;Q3_CP;Constructional praxis;Executive
+3;Q4SCORE;Q4_DWR;Delayed word recall;Memory
+4;Q5SCORE;Q5_NT;Naming task;Language
+5;Q6SCORE;Q6_IP;Ideational praxis;Executive
+6;Q7SCORE;Q7_O;Orientation;Orientation
+7;Q8SCORE;Q8_WRT;Word recognition task;Memory
+8;Q9SCORE;Q9_RTI;Remembering test instructions;Memory
+9;Q10SCORE;Q10_Comp;Comprehension;Language
+10;Q11SCORE;Q11_WFD;Word finding difficulty;Language
+11;Q12SCORE;Q12_SL;Spoken language ability;Language
+12;Q13SCORE;Q13_NC;Number cancellation;Attention
+13;TRAILS;Mo1_TMK;Trail-making task;Visuospatial
+14;CUBE;Mo2_CC;Copy cube;Visuospatial
+15;CLOCKCON;Mo3_Drawing;Drawing a clock ;Visuospatial
+15;CLOCKNO;Mo3_Drawing;Drawing a clock ;Visuospatial
+15;CLOCKHAN;Mo3_Drawing;Drawing a clock ;Visuospatial
+16;LION;Mo4_Naming;Naming ;Language
+16;RHINO;Mo4_Naming;Naming ;Language
+16;CAMEL;Mo4_Naming;Naming ;Language
+17;IMMT1W1;Mo5_WRT1;Word recall trail 1;Memory
+17;IMMT1W2;Mo5_WRT1;Word recall trail 1;Memory
+17;IMMT1W3;Mo5_WRT1;Word recall trail 1;Memory
+17;IMMT1W4;Mo5_WRT1;Word recall trail 1;Memory
+17;IMMT1W5;Mo5_WRT1;Word recall trail 1;Memory
+18;IMMT2W1;Mo6_WRT2;Word recall trail 2;Memory
+18;IMMT2W2;Mo6_WRT2;Word recall trail 2;Memory
+18;IMMT2W3;Mo6_WRT2;Word recall trail 2;Memory
+18;IMMT2W4;Mo6_WRT2;Word recall trail 2;Memory
+18;IMMT2W5;Mo6_WRT2;Word recall trail 2;Memory
+19;DIGFOR;Mo7_DSF;Digit Span Forward;Attention
+20;DIGBACK;Mo8_DSB;Digit Span Backward;Attention
+21;LETTERS;Mo9_SA;Sustained attention;Attention
+22;SERIAL1;Mo10_Serial;Serial substraction;Attention
+22;SERIAL2;Mo10_Serial;Serial substraction;Attention
+22;SERIAL3;Mo10_Serial;Serial substraction;Attention
+22;SERIAL4;Mo10_Serial;Serial substraction;Attention
+22;SERIAL5;Mo10_Serial;Serial substraction;Attention
+23;REPEAT1;Mo11_Rep;Repetition;Language
+23;REPEAT2;Mo11_Rep;Repetition;Language
+24;FFLUENCY;Mo12_VF;Verbal fluency;Language
+25;ABSTRAN;Mo13_Abs;Abstraction;Executive
+25;ABSMEAS;Mo13_Abs;Abstraction;Executive
+26;DELW1;Mo14_DWR;Delayed world recall;Memory
+26;DELW2;Mo14_DWR;Delayed world recall;Memory
+26;DELW3;Mo14_DWR;Delayed world recall;Memory
+26;DELW4;Mo14_DWR;Delayed world recall;Memory
+26;DELW5;Mo14_DWR;Delayed world recall;Memory
+27;DATE_y;Mo15_OT;Orientation to time;Orientation
+27;MONTH;Mo15_OT;Orientation to time;Orientation
+27;YEAR;Mo15_OT;Orientation to time;Orientation
+27;DAY;Mo15_OT;Orientation to time;Orientation
+28;PLACE;Mo16_OP;Orientation to place;Orientation
+28;CITY;Mo16_OP;Orientation to place;Orientation

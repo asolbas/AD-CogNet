@@ -1,0 +1,14 @@
+﻿Node;ADNI column;Label;Test;Cognitive Domain
+0;Q1SCORE;Q1_WR;Word recall;Memory
+1;Q2SCORE;Q2_Comm;Commands;Language
+2;Q3SCORE;Q3_CP;Constructional praxis;Visuospatial
+3;Q4SCORE;Q4_DWR;Delayed word recall;Memory
+4;Q5SCORE;Q5_NT;Naming task;Language
+5;Q6SCORE;Q6_IP;Ideational praxis;Visuospatial
+6;Q7SCORE;Q7_O;Orientation;Orientation
+7;Q8SCORE;Q8_WRT;Word recognition task;Memory
+8;Q9SCORE;Q9_RTI;Remembering test instructions;Memory
+9;Q10SCORE;Q10_Comp;Comprehension;Language
+10;Q11SCORE;Q11_WFD;Word finding difficulty;Language
+11;Q12SCORE;Q12_SL;Spoken language ability;Language
+12;Q13SCORE;Q13_NC;Number cancellation;Attention

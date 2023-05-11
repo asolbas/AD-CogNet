@@ -1,0 +1,18 @@
+﻿Node;ADNI column;Label;Test;Cognitive Domain
+0;AVDEL30MIN;NB1_RAVLTD;RAVLT Delayed;Memory
+1;AVDELTOT;NB2_RAVLTR;RAVLT Recognition;Memory
+2;AVTOT1;NB3_RAVLTI;RAVLT Immediate ;Memory
+2;AVTOT2;NB3_RAVLTI;RAVLT Immediate ;Memory
+2;AVTOT3;NB3_RAVLTI;RAVLT Immediate ;Memory
+2;AVTOT4;NB3_RAVLTI;RAVLT Immediate ;Memory
+2;AVTOT5;NB3_RAVLTI;RAVLT Immediate ;Memory
+3;CATANIMSC;NB4_CAT_FLU;Category fluency score;Language
+3;CATVEGESC;NB4_CAT_FLU;Category fluency score;Language
+4;BNTSPONT;NB5_BNT;Boston Naming Test Spontaneous;Language
+5;CLOCKSCOR;NB6_CDT;Clock drawing score;Visuospatial
+6;COPYSCOR;NB7_CCT;Clock Copy Score;Visuospatial
+7;DSPANFOR;NB8_DSF;Digit Span Forward;Executive
+8;DSPANBAC;NB9_DSB;Digit Span Backward;Executive
+9;TRAASCOR;NB10_TMTA;Trail making test A score;Executive
+10;TRABSCOR;NB11_TMTB;Trail making test B score;Executive
+11;ANARTERR;NB12_ANART;American National Adult Reading Test;Language
