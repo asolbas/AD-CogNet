@@ -12,6 +12,15 @@ The main objective of this project is to construct and analyze a network of cogn
 
 - R version 4.2.3
 
+## Files
+
+| File name | Description |
+| --- | --- |
+| `GT_analysis.ipynb` | Construction and analysis of cognitive networks with the nodes being different cognitive tests |
+| `GT_analysis_domains.ipynb` | Construction and analysis of cognitive networks with the nodes being cognitive domains |
+| `GT_analysis_genetics.ipynb` | Construction and analysis of cognitive networks for various genetic profiles clusters |
+| `results_visualization.R` | Exploratory data analysis and results visualizations |
+
 ## Data 
 
 For this work, the demographical and neuropsychological data from the Alzheimer's Disease Neuroimaging Initiative (ADNI) was employed. These datasets are available at the [ADNI website](https://adni.loni.usc.edu/) upon formal request. A complete listing of ADNI investigators can be found in the following [link](http://adni.loni.usc.edu/wp-content/uploads/how_to_apply/ADNI_Acknowledgement_List.pdf).
@@ -28,17 +37,7 @@ In particular, the ADNI datasets used in the study are the following:
 - Alzheimer's Disease Assessment Scale (ADAS) [ADNIGO,2,3]ç
 - ADNIMERGE - Key ADNI tables merged into one table - Dictionary [ADNI1,GO,2,3]
 
-
-
-
-## Files
-
-| File name | Description |
-| --- | --- |
-| `GT_analysis.ipynb` | Construction and analysis of cognitive networks with the nodes being different cognitive tests |
-| `GT_analysis_domains.ipynb` | Construction and analysis of cognitive networks with the nodes being cognitive domains |
-| `GT_analysis_genetics.ipynb` | Construction and analysis of cognitive networks for various genetic profiles clusters |
-| `results_visualization.R` | Exploratory data analysis and results visualizations |
+In addition, we have created some metadata files associating cognitive tests with cognitive tests. These files can be found in the `Data` folder in this repository. 
 
 ## Contributors
 
