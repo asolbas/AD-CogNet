@@ -12,6 +12,8 @@ The main objective of this project is to construct and analyze a network of cogn
 
 - R version 4.2.3
 
+##Workflow
+
 ## Files
 
 | File name | Description |
