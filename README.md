@@ -37,7 +37,7 @@ In particular, the ADNI datasets used in the study are the following:
 - Alzheimer's Disease Assessment Scale (ADAS) [ADNIGO,2,3]ç
 - ADNIMERGE - Key ADNI tables merged into one table - Dictionary [ADNI1,GO,2,3]
 
-In addition, we have created some metadata files associating cognitive tests with cognitive tests. These files can be found in the `Data` folder in this repository. 
+In addition, we have created some metadata files associating cognitive tests with cognitive tests. These files can be found in the `Data` folder of the current repository. 
 
 ## Contributors
 
