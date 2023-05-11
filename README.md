@@ -12,6 +12,8 @@ The main objective of this project is to construct and analyze a network of cogn
 
 - R version 4.2.3
 
+##Workflow
+
 ## Files
 
 | File name | Description |
@@ -37,7 +39,9 @@ In particular, the ADNI datasets used in the study are the following:
 - Alzheimer's Disease Assessment Scale (ADAS) [ADNIGO,2,3]ç
 - ADNIMERGE - Key ADNI tables merged into one table - Dictionary [ADNI1,GO,2,3]
 
-In addition, we have created some metadata files associating cognitive tests with cognitive tests. These files can be found in the `Data` folder of the current repository. 
+In addition, we have created some metadata files associating cognitive tests with cognitive tests. These files can be found in the `NC_Tests` folder of the current repository. 
+
+Data used for the `GT_analysis.ipnyb` comes from the implementation of an unsupervised machine learning developed by another research project of the Department of Computer Architecture and Automation of the Complutense University of Madrid (UCM) and it is currently no open access. 
 
 ## Contributors
 
