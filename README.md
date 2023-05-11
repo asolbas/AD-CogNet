@@ -20,6 +20,10 @@ For this work, the demographical and neuropsychological data from the Alzheimer'
 
 The original Tableau dashboard can be found in the following [link](https://public.tableau.com/views/AD-CogNet/Dashboard1?:language=es-ES&publish=yes&:display_count=n&:origin=viz_share_link). 
 
+In particular, the ADNI datasets used in the study are the following:
+
+
+
 ## Files
 
 | File name | Description |
