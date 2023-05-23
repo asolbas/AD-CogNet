@@ -14,7 +14,7 @@ The main objective of this project is to construct and analyze a network of cogn
 
 ## Workflow
 
-![plot](./Figures/GeneralWorkflow.png)
+![plot](./Figures/TFM_Workflow.png)
 ![plot](./Figures/DownstreamAnalysis.png)
 
 ## Files
