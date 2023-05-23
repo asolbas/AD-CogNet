@@ -39,7 +39,7 @@ In particular, the ADNI datasets used in the study are the following:
 - Neuropsychological Battery [ADNI1,GO,2,3]
 - Montreal Cognitive Assessment (MoCA) [ADNIGO,2,3]
 - Mini-Mental State Examination (MMSE) [ADNI1,GO,2,3]
-- Alzheimer's Disease Assessment Scale (ADAS) [ADNIGO,2,3]ç
+- Alzheimer's Disease Assessment Scale (ADAS) [ADNIGO,2,3]
 - ADNIMERGE - Key ADNI tables merged into one table - Dictionary [ADNI1,GO,2,3]
 
 In addition, we have created some metadata files associating cognitive tests with cognitive tests. These files can be found in the `NC_Tests` folder of the current repository. 
